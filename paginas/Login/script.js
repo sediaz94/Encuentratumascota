@@ -1,3 +1,4 @@
+// ---------------------Inicio de scrip de login ---------------------
 const container = document.querySelector(".container"),
       pwShowHide = document.querySelectorAll(".showHidePw"),
       pwFields = document.querySelectorAll(".password"),
@@ -32,3 +33,4 @@ const container = document.querySelector(".container"),
     login.addEventListener("click", ( )=>{
         container.classList.remove("active");
     });
+// ---------------------fin de script de login---------------------
