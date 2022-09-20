@@ -13,7 +13,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #e29818;
+    background-color: #00B98E;
 }
 
 .container{
@@ -74,7 +74,7 @@ body{
     bottom: 0;
     height: 3px;
     width: 30px;
-    background-color: #e29818;
+    background-color: #00B98E;
     border-radius: 25px;
 }
 
@@ -99,7 +99,7 @@ body{
 }
 
 .input-field input:is(:focus, :valid){
-    border-bottom-color: #e29818;
+    border-bottom-color: #00B98E;
 }
 
 .input-field i{
@@ -113,7 +113,7 @@ body{
 
 /* Icono de contraseña */
 .input-field input:is(:focus, :valid) ~ i{
-    color: #e29818;
+    color: #00B98E;
 }
 
 .input-field i.icon{
@@ -139,7 +139,7 @@ body{
 
 .checkbox-content input{
     margin: 0 8px -2px 4px;
-    accent-color: #e29818;
+    accent-color: #00B98E;
 }
 
 .form .text{
@@ -148,7 +148,7 @@ body{
 }
 
 .form a.text{
-    color: #e29818;
+    color: #00B98E;
     text-decoration: none;
 }
 .form a:hover{
@@ -166,13 +166,13 @@ body{
     font-weight: 500;
     letter-spacing: 1px;
     border-radius: 6px;
-    background-color: #e29818;
+    background-color: #00B98E;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .button input:hover{
-    background-color: #a98a1d;
+    background-color: #062229;
 }
 
 .form .login-signup{
