@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login y  formulario de registro</title>
+    
+    <!-- ===== Iconscout CSS  para usar los iconos===== https://iconscout.com/unicons -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="paginas/Login/style.css">
+         
+    <!--formulario de login y registro-->
+</head>
+<body>
+    
+    <div class="container">
+        <div class="forms">
+            <div class="form login">
+                <span class="title">Ingreso</span>
+
+                <form action="#">
+                    <div class="input-field">
+                        <input type="text" placeholder="Ingresa tu correo" required>
+                        <i class="uil uil-envelope icon"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" class="password" placeholder="Ingresa tu contraseña" required>
+                        <i class="uil uil-lock icon"></i>
+                        <i class="uil uil-eye-slash showHidePw"></i>
+                    </div>
+
+                    <div class="checkbox-text">
+                        <div class="checkbox-content">
+                            <input type="checkbox" id="logCheck">
+                            <label for="logCheck" class="text">Recuerdame</label>
+                        </div>
+                        
+                        <a href="#" class="text">¿Olvidaste tu contraseña?</a>
+                    </div>
+
+                    <div class="input-field button">
+                        <input type="button" value="Entrar">
+                    </div>
+                </form>
+
+                <div class="login-signup">
+                    <span class="text">¿No eres miembro?
+                        <a href="#" class="text signup-link">¡Registrate!</a>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Formulario de registro -->
+            <div class="form signup">
+                <span class="title">Registro</span>
+
+                <form action="#">
+                    <div class="input-field">
+                        <input type="text" placeholder="ingresa tu nombre y apellidos" required>
+                        <i class="uil uil-user"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" placeholder="Ingresa tu correo" required>
+                        <i class="uil uil-envelope icon"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" class="password" placeholder="Crea una contraseña" required>
+                        <i class="uil uil-lock icon"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" class="password" placeholder="Confirma la contraseña" required>
+                        <i class="uil uil-lock icon"></i>
+                        <i class="uil uil-eye-slash showHidePw"></i>
+                    </div>
+
+                    <div class="checkbox-text">
+                        <div class="checkbox-content">
+                            <input type="checkbox" id="termCon">
+                            <label for="termCon" class="text">Acepto los terminos y condiciones</label>
+                        </div>
+                    </div>
+
+                    <div class="input-field button">
+                        <input type="button" value="Aceptar">
+                    </div>
+                </form>
+
+                <div class="login-signup">
+                    <span class="text">¿Ya eres miembro?
+                        <a href="#" class="text login-link">Ingresar ahora</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- scrip de js para activar funciones  -->
+    <script src="paginas/Login/script.js"></script>
+</body>
+</html>
+
