@@ -24,6 +24,8 @@ DROP TABLE IF EXISTS `mascota`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `mascota` (
   `idMascota` int NOT NULL AUTO_INCREMENT,
+  `Nombre_mascota` varchar(45) DEFAULT NULL,
+  `Tipo` varchar(45) DEFAULT NULL,
   `Raza` varchar(25) DEFAULT NULL,
   `Edad` int DEFAULT NULL,
   `Sexo` varchar(10) DEFAULT NULL,
@@ -52,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-09-21 21:53:13
+-- Dump completed on 2022-09-22 13:11:34
