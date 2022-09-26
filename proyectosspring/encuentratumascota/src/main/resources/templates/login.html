@@ -21,9 +21,9 @@
                 <div class="form login">
                     <span class="title">Ingreso</span>
 
-                    <form action="#">
+                    <form method="post" th:action="@{/login}">
                         <div class="input-field">
-                            <input type="text" placeholder="Ingresa tu correo" required>
+                            <input type="text" placeholder="Ingresa tu usuario" required>
                             <i class="uil uil-envelope icon"></i>
                         </div>
                         <div class="input-field">
@@ -44,13 +44,27 @@
                         <div class="input-field button">
                             <input type="button" value="Entrar">
                         </div>
+                        
+                    </form>
+                                      
+                    <!-- Formulario ingreso prueba -->
+                    
+                    <h3>Formulario de ingreso prueba</h3>
+                    <form method="post" th:action="@{/login}">
+                            <label for="username">Usuario</label>
+                            <input type="text" id="username" name="username" placeholder="Ingrese su usuario">
+
+                            <label for="password">Password</label>
+                            <input type="text" id="password" name="password" placeholder="Ingrese su password">
+
+                            <input type="submit" value="Entrar al sistema">
                     </form>
 
                     <div class="login-signup">
                         <span class="text">¿No eres miembro?
                             <a href="#" class="text signup-link">¡Registrate!</a>
                         </span>
-                    </div>
+                     </div>
                 </div>
 
                 <!-- Formulario de registro -->
@@ -94,18 +108,7 @@
                     </div>
                 </div>
             </div>
-            <h2>listar usuarios de mi base de datos</h2>
-                <table>
-                    <tr>
-                        <th>Id_Usuario</th>
-                        <th>Nombres</th>
-                    </tr>
-                    <tr th:each="usuario : ${usuarios}">
-                        <td th:text="${usuario.id_usuario}"></td>
-                        <td th:text="${usuario.nombres}"></td>
-                    </tr>
-
-                </table>
+            
         </div>
 
         <!-- scrip de js para activar funciones  -->

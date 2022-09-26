@@ -26,10 +26,15 @@ public class ControladorInicio {
     }
     
     @GetMapping("/login")
-    public String login(Model model){
+    public String login(){
+        return "login";
+    }
+    
+    @GetMapping("/loginadmin")
+    public String loginadmin(Model model){
         var usuarios = usuarioDao.findAll();
         model.addAttribute("usuarios", usuarios);
-        return "login";
+        return "loginadmin";
     }
     
     @GetMapping("/me_encontraste")

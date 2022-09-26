@@ -22,7 +22,7 @@ public class Usuario implements Serializable{
     private Integer id_usuario;
     private String nombres;
     private String apellidos;
-    private String contraseña;
+    private String contrasena;
     private String correo;
     private String telefono_contacto;
     private String titulo_usuario;
