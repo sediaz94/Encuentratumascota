@@ -26,12 +26,12 @@ CREATE TABLE `usuario` (
   `id_usuario` int NOT NULL AUTO_INCREMENT,
   `nombres` varchar(45) DEFAULT NULL,
   `apellidos` varchar(45) DEFAULT NULL,
-  `contrasena` varchar(20) DEFAULT NULL,
-  `correo` varchar(30) DEFAULT NULL,
   `telefono_contacto` varchar(20) DEFAULT NULL,
-  `titulo_usuario` varchar(45) DEFAULT NULL,
+  `correo` varchar(30) DEFAULT NULL,
+  `contrasena` varchar(20) DEFAULT NULL,
+  `tipo_usuario` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id_usuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,7 +40,7 @@ CREATE TABLE `usuario` (
 
 LOCK TABLES `usuario` WRITE;
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
-INSERT INTO `usuario` VALUES (1,'Francisco Antonio','Cármenes Bernate','Frankar$2022','carmenes020814@gmail.com','3136956227','dueño'),(2,'Lorena','Cruz Bernate','Lorena$2022','lorena251070','3168957563','avistador');
+INSERT INTO `usuario` VALUES (1,'Francisco Antonio','Cármenes Bernate','3136956227','carmenes020814@gmail.com','1234','Administrador'),(2,'Andrés Mauricio','Domínguez Sánchez','3138952456','andres@gmail.com','3456','Avistador'),(3,'Daniela','Cifuentes','3185961245','daniela@gmail.com','7891','Dueño'),(4,'Freddy Sneyder','Cedeño Uva','3118593678','freddy@gmail.com','1011','Dueño'),(5,'Sebastián A.','Díaz Ramírez','3142562378','sebastian@gmail.com','1213','Avistador');
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-09-26 15:31:48
+-- Dump completed on 2022-09-29 12:24:18

@@ -24,16 +24,21 @@ DROP TABLE IF EXISTS `mascota`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `mascota` (
   `id_mascota` int NOT NULL AUTO_INCREMENT,
+  `estado_mascota` varchar(45) DEFAULT NULL,
   `nombre_mascota` varchar(45) DEFAULT NULL,
   `tipo` varchar(45) DEFAULT NULL,
   `raza` varchar(45) DEFAULT NULL,
-  `edad` int DEFAULT NULL,
+  `edad` varchar(45) DEFAULT NULL,
   `sexo` varchar(45) DEFAULT NULL,
-  `imagen` blob,
-  `titulo_mascota` varchar(45) DEFAULT NULL,
+  `direccion` varchar(45) DEFAULT NULL,
+  `zona` varchar(45) DEFAULT NULL,
+  `ciudad` varchar(45) DEFAULT NULL,
+  `dpto` varchar(45) DEFAULT NULL,
+  `fecha` date DEFAULT NULL,
+  `imagen` varchar(45) DEFAULT NULL,
   `observaciones` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`id_mascota`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -42,6 +47,7 @@ CREATE TABLE `mascota` (
 
 LOCK TABLES `mascota` WRITE;
 /*!40000 ALTER TABLE `mascota` DISABLE KEYS */;
+INSERT INTO `mascota` VALUES (1,'Extraviado','Lucky','Perro','Labrador','Adulto','Macho','Cl 25 4 26','Sur','Cali','Valle','2022-10-30','perro1','Color chocolate'),(2,'Encontrado','Luna','Gato','Siamés','Adulto','Hembra','Cr 10 5 32','Norte','Popayán','Cauca','2022-01-10','gato1','Manchas negras'),(3,'Extraviado','Lulu','Perro','Bulldog francés','Adulto','Hembra','Av. Ciudad de Cali','Oriente','Palmira','Valle','2022-06-14','perro3','Negro'),(4,'Encontrado','Tobby','Gato','Criollo','Adulto','Macho','Cr 50 101 60','Sur','Cali','Valle','2022-08-02','gato2','Cariñoso'),(5,'Encontrado','Rocky','Perro','Pastor alemán','Adulto','Macho','Av. Las Americas','Centro','Cali','Valle','2022-09-12','perro2','Adiestrado'),(6,'Encontrado','Mambrú','Gato','Criollo','Adulto','Macho','Av. Simón bolivar con 98','Sur','Cali','Valle','2022-05-19','gato3','Amoroso');
 /*!40000 ALTER TABLE `mascota` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -54,4 +60,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-09-26 15:31:48
+-- Dump completed on 2022-09-29 12:24:18

@@ -4,6 +4,8 @@
  */
 package com.co;
 
+import com.co.dao.AvisoDAO;
+import com.co.dao.MascotaDAO;
 import com.co.dao.UsuarioDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -20,8 +22,14 @@ public class ControladorInicio {
     @Autowired
     private UsuarioDAO usuarioDao;
     
+    @Autowired
+    private MascotaDAO mascotaDao;
+    
+     
     @GetMapping("/")
-    public String inicio(){
+    public String inicio(Model model){
+        var mascotas = mascotaDao.findAll();
+        model.addAttribute("mascotas", mascotas);
         return "index";
     }
     
@@ -34,7 +42,7 @@ public class ControladorInicio {
     public String loginadmin(Model model){
         var usuarios = usuarioDao.findAll();
         model.addAttribute("usuarios", usuarios);
-        return "loginadmin";
+        return "admin";
     }
     
     @GetMapping("/me_encontraste")

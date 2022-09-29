@@ -9,7 +9,7 @@ import org.springframework.data.repository.CrudRepository;
 
 /**
  *
- * @author Francisco Cardenas
+ * @author Francisco Cármenes
  */
 public interface UsuarioDAO extends CrudRepository<Usuario, Integer> {
     
