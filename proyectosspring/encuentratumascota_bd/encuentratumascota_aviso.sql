@@ -26,16 +26,13 @@ CREATE TABLE `aviso` (
   `id_aviso` int NOT NULL AUTO_INCREMENT,
   `id_usuario` int DEFAULT NULL,
   `id_mascota` int DEFAULT NULL,
-  `tipo_mascota` varchar(45) DEFAULT NULL,
-  `zona` varchar(45) DEFAULT NULL,
-  `direccion` varchar(45) DEFAULT NULL,
-  `fecha` date DEFAULT NULL,
+  `estado_aviso` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id_aviso`),
   KEY `id_usuario_idx` (`id_usuario`),
   KEY `id_mascota_idx` (`id_mascota`),
   CONSTRAINT `id_mascota` FOREIGN KEY (`id_mascota`) REFERENCES `mascota` (`id_mascota`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `id_usuario` FOREIGN KEY (`id_usuario`) REFERENCES `usuario` (`id_usuario`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -44,6 +41,7 @@ CREATE TABLE `aviso` (
 
 LOCK TABLES `aviso` WRITE;
 /*!40000 ALTER TABLE `aviso` DISABLE KEYS */;
+INSERT INTO `aviso` VALUES (1,1,1,'extraviado'),(2,2,2,'extraviado'),(3,2,3,'extraviado');
 /*!40000 ALTER TABLE `aviso` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -56,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-09-26 15:31:48
+-- Dump completed on 2022-09-29 12:24:18

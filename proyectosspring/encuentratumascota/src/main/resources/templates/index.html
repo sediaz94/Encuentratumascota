@@ -294,28 +294,26 @@
                     </div>
                 </div>
                 <div class="tab-content">
-                    <div id="tab-1" class="tab-pane fade show p-0 active">
-                        <div class="row g-4">
-                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div  id="tab-1" class="tab-pane fade show p-0 active">
+                        <div  class="row g-4">
+                            <div th:each="mascota: ${mascotas}" class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                                 <div class="property-item rounded overflow-hidden">
                                     <div class="position-relative overflow-hidden">
-                                        <a href=""><img class="img-fluid" src="img/perro1.png" alt=""></a>
-                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">Extraviado</div>
-                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Perro adulto</div>
+                                        <a href=""><img class="img-fluid" th:src="@{${'/img/' + mascota.imagen + '.png'}}" alt=""></a>
+                                        <div th:text="${mascota.estado_mascota}" class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3"></div>
+                                        <div th:text="${mascota.edad}" class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3"></div>
                                     </div>
-                                    <div class="p-4 pb-0">
-                                        <h5 class="text-primary mb-3">312 345 6789</h5>
-                                        <a class="d-block h5 mb-2" href="">Labrador Golden</a>
-                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>Bogotá, Cundinamarca</p>
+                                    <div class="text-primary mb-3">
+                                        <!--<h5 class="text-primary mb-3">312 345 6789</h5>-->
+                                        <a th:text="${mascota.raza}"class="d-block h5 mb-2" href=""></a>
+                                        <p><i th:text="${' '+mascota.ciudad + ' , ' + mascota.dpto}" class="fa fa-map-marker-alt text-primary me-2"></i></p>
                                     </div>
                                     <div class="d-flex border-top">
-                                        
                                         <small class="flex-fill text-center border-end py-2"><a href="me_encontraste.html">Lo encontré</a></small>
-                                        
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                            <!--<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                                 <div class="property-item rounded overflow-hidden">
                                     <div class="position-relative overflow-hidden">
                                         <a href=""><img class="img-fluid" src="img/perro1.png" alt=""></a>
@@ -400,7 +398,7 @@
                                     <div class="d-flex border-top">
                                         <small class="flex-fill text-center border-end py-2"><a href="me_encontraste.html">Lo encontré</a></small>                                    </div>
                                 </div>
-                            </div>
+                            </div>-->
                             <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.1s">
                                 <a class="btn btn-primary py-3 px-5" href="">Ver más publicaciones</a>
                             </div>

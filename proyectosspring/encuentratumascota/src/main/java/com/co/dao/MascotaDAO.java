@@ -4,13 +4,13 @@
  */
 package com.co.dao;
 
-import com.co.pojo.Usuario;
+import com.co.pojo.Mascota;
 import org.springframework.data.repository.CrudRepository;
 
 /**
  *
- * @author Francisco Cármenes
+ * @author Francisco Cardenas
  */
-public interface UsuarioDAO extends CrudRepository<Usuario, Integer> {
+public interface MascotaDAO extends CrudRepository<Mascota, Integer>{
     
 }

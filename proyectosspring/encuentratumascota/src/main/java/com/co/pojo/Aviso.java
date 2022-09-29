@@ -5,6 +5,7 @@
 package com.co.pojo;
 
 import java.io.Serializable;
+import java.util.Date;
 import javax.persistence.*;
 import lombok.Data;
 
@@ -14,16 +15,12 @@ import lombok.Data;
  */
 @Data
 @Entity
-@Table(name="usuario")
-public class Usuario implements Serializable{
-    
+@Table(name="aviso")
+public class Aviso implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id_aviso;
     private Integer id_usuario;
-    private String nombres;
-    private String apellidos;
-    private String telefono_contacto;
-    private String correo;
-    private String contrasena;
-    private String tipo_usuario;
+    private Integer id_mascota;
+    private String estado_aviso;
 }
