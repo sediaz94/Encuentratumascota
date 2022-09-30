@@ -23,7 +23,7 @@ DROP TABLE IF EXISTS `aviso`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `aviso` (
-  `id_aviso` int NOT NULL AUTO_INCREMENT,
+  `id_aviso` int NOT NULL,
   `id_usuario` int DEFAULT NULL,
   `id_mascota` int DEFAULT NULL,
   `estado_aviso` varchar(45) DEFAULT NULL,
@@ -32,7 +32,7 @@ CREATE TABLE `aviso` (
   KEY `id_mascota_idx` (`id_mascota`),
   CONSTRAINT `id_mascota` FOREIGN KEY (`id_mascota`) REFERENCES `mascota` (`id_mascota`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `id_usuario` FOREIGN KEY (`id_usuario`) REFERENCES `usuario` (`id_usuario`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -54,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-09-29 12:24:18
+-- Dump completed on 2022-09-30 17:45:51

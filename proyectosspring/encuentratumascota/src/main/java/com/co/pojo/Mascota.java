@@ -19,7 +19,7 @@ import lombok.Data;
 @Table(name="mascota")
 public class Mascota implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id_mascota;
     private String estado_mascota;
     private String nombre_mascota;
