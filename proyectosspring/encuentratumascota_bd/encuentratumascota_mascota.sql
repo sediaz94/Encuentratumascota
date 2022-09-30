@@ -38,7 +38,7 @@ CREATE TABLE `mascota` (
   `imagen` varchar(45) DEFAULT NULL,
   `observaciones` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`id_mascota`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -60,4 +60,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-09-29 12:24:18
+-- Dump completed on 2022-09-30 17:45:51

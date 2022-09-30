@@ -11,6 +11,9 @@ import org.springframework.data.repository.CrudRepository;
  *
  * @author Francisco Cármenes
  */
-public interface AvisoDAO extends CrudRepository<Aviso, Integer>{
-    
+public interface AvisoDAO extends CrudRepository<Aviso, Integer> {
+
+//    @Query(value = "SELECT m.estado_mascota, m.edad, m.imagen, m.raza, m.ciudad, m.dpto , u.telefono_contacto FROM aviso v JOIN usuario u ON v.id_usuario = u.id_usuario JOIN mascota m ON v.id_mascota = m.id_mascota")
+//    List<Aviso> avisoMascota();
+
 }
