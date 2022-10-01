@@ -31,8 +31,10 @@
             <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
                 <!-- Sidebar - Brand -->
-                <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{asset'/dash/index.html')}}">
-
+                <a class="sidebar-brand d-flex align-items-center justify-content-center" th:href="@{/}">
+                    
+                        <img class="img-fluid" src="img/logo.png" alt="Icon" style="width: 50px; height: 50px;">
+                    
                     <div class="sidebar-brand-text mx-3">Administrador</div>
                 </a>
 
@@ -406,10 +408,10 @@
                                                 <td th:text="${usuario.contrasena}"></td>
                                                 <td th:text="${usuario.tipo_usuario}"></td>
                                                 <td>
-                                                    <a class="btn btn-success btn-sm">Editar</a>
+                                                    <a class="btn btn-success btn-sm" th:href="@{/editar/}+${usuario.id_usuario}">Editar</a>
                                                 </td>
                                                 <td>
-                                                    <a class="btn btn-danger btn-sm">Eliminar</a>
+                                                    <a class="btn btn-danger btn-sm" th:href="@{/eliminar/}+${usuario.id_usuario}">Eliminar</a>
                                                 </td>
                                             </tr>
                                         </tbody>

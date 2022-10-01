@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 /**
@@ -26,19 +27,11 @@ public class ControladorInicio {
     
     @Autowired
     private MascotaDAO mascotaDao;
-    
-//    @Autowired
-//    private AvisoDAO avisoDao;
-    
      
     @GetMapping("/")
     public String inicio(Model model){
         var mascotas = mascotaDao.findAll();
         model.addAttribute("mascotas", mascotas);
-        
-//        var avisos = avisoDao.findAll();
-//        model.addAttribute("avisos", avisos);
-        
         return "index";
     }
     
@@ -54,17 +47,27 @@ public class ControladorInicio {
         return "admin";
     }
     
-//    @GetMapping("/registrar")
-//    public String registrar(){
-//        return "login";
-//    }
-    
     @PostMapping("/guardar")
     public String guardar(Usuario usuarios){
         usuarioDao.save(usuarios);
-        return "redirect:admin";
+        return "redirect:/admin";
     }
-            
+    
+    @GetMapping("/editar/{id_usuario}")
+    public String editar(@PathVariable("id_usuario")Integer id_usuario, Model model){
+        var usuarios = usuarioDao.findById(id_usuario);
+        model.addAttribute("usuarios", usuarios);
+        return "modificar";
+    }
+    
+    @GetMapping("/eliminar/{id_usuario}")
+    public String eliminar(@PathVariable("id_usuario")Integer id_usuario){
+        usuarioDao.deleteById(id_usuario);
+        return "redirect:/admin";
+    }
+
+    
+    
     @GetMapping("/me_encontraste")
     public String me_encontraste(){
         return "me_encontraste";

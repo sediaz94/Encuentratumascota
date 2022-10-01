@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login y  formulario de registro</title>
+
+        <!-- ===== Iconscout CSS  para usar los iconos===== https://iconscout.com/unicons -->
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+        <!-- ===== CSS ===== -->
+        <link rel="stylesheet" href="paginas/Login/style.css">
+
+        <!--    Icono cellphone-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+        <!--formulario de login y registro-->
+    </head>
+
+
+    <body>
+
+        <div  class="container">
+            <div id="registro" class="forms">
+
+                <!-- Formulario para modificar -->
+                <div class="form signup">
+                    <span class="title">Modificar</span>
+                    <form method="post" th:action="@{/guardar}" th:object="${usuarios}">
+
+                        <input type="hidden" name="id_usuario" th:field="*{id_usuario}" >
+
+
+                        <div class="input-field">
+                            <input type="text" name="nombres" th:field="*{nombres}">
+                            <i class="uil uil-user"></i>
+                        </div>
+                        <div class="input-field">
+                            <input type="text" name="apellidos" th:field="*{apellidos}">
+                            <i class="uil uil-user"></i>
+                        </div>
+                        <div class="input-field">
+                            <input type="text" name="telefono_contacto" th:field="*{telefono_contacto}" >
+                            <i class="bi bi-phone"></i>
+                        </div>
+                        <div class="input-field">
+                            <input type="text" name="correo" th:field="*{correo}">
+                            <i class="uil uil-envelope icon"></i>
+                        </div>
+                        <div class="input-field">
+                            <input type="password" name="contrasena" class="password" th:field="*{contrasena}" >
+                            <i class="uil uil-lock icon"></i>
+                        </div>
+                        <div class="input-field">
+                            <div id="select_tipou" class="form-select-sm">
+                                <select name="tipo_usuario" aria-label="Default select example" th:field="*{tipo_usuario}">
+                                    <option value="Dueño" selected>Seleccione el tipo de usuario</option>
+                                    <option value="Dueño">Dueño</option>
+                                    <option value="Avistador">Avistador</option>
+                                </select>
+                            </div>
+                        </div>   
+                        <div class="input-field button">
+                            <input type="submit" value="Modificar">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- script de js para activar funciones  -->
+        <script src="paginas/Login/script.js"></script>
+    </body>
+</html>
+
